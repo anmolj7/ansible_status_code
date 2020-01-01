@@ -1,0 +1,8 @@
+- hosts: localhost
+  tasks:
+    - name: Getting Reponse Code.
+      get_code: 
+        url: http://google.com
+      register: result
+
+    - debug: var=result    

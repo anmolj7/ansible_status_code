@@ -1,0 +1,20 @@
+---
+- hosts: localhost 
+  name: play_1
+  tasks:
+    - name: Starting Display-manager
+      service: 
+        name: display-manager
+        state: started 
+    - name: Stopping Network-manager
+      service:
+        name: network-manager
+        state: stopped
+    - name: Restarting Network-manager
+      service: 
+        name: network-manager
+        state: restarted 
+    - name: Restarting Whoopsie
+      service: 
+        name: whoopsie
+        state: restarted 
